@@ -1,4 +1,4 @@
-import { columnFormatter } from "@/shared/model/serverTable";
+import { columnFormatter } from "@/modules/users/lib/columnFormatter";
 import { useMemo } from "react";
 import { CellRole } from "../components/CellRole";
 import type { User } from "@/modules/users/api";

@@ -1,4 +1,4 @@
-import type { ColumnFormatterType } from "@/shared/model/serverTable";
+import type { ColumnFormatterType } from "@/modules/users/lib/columnFormatter";
 
 class ColumnFormatter implements ColumnFormatterType {
   /**
