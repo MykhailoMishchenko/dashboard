@@ -1,4 +1,4 @@
-export { ServerTable } from "@/shared/ui/serverTable/serverTable";
+export { ServerTable } from "@/shared/ui/serverTable/ServerTable";
 export type {
   ServerTableProps,
   TableInitializationSlice,
