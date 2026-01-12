@@ -1,7 +1,7 @@
-import { Toaster as Sonner } from "sonner"
+import { Toaster as Sonner } from "sonner";
 
-import { cn } from "@/shared/lib/utils"
-import type { Props } from "@/shared/ui/sonner/sonner.types"
+import { cn } from "@/shared/lib/utils";
+import type { Props } from "@/shared/ui/sonner/sonner.types";
 
 export function Toaster({ className, ...props }: Props) {
   return (
@@ -14,11 +14,11 @@ export function Toaster({ className, ...props }: Props) {
           description: "group-[.toast]:text-muted-foreground",
           actionButton:
             "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",
-          cancelButton: "group-[.toast]:bg-muted group-[.toast]:text-foreground",
+          cancelButton:
+            "group-[.toast]:bg-muted group-[.toast]:text-foreground",
         },
       }}
       {...props}
     />
-  )
+  );
 }
-

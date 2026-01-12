@@ -3,11 +3,33 @@ import { createRoot } from "react-dom/client";
 import { toast } from "sonner";
 import "./index.css";
 
-import { AppLayout } from "@/app/layout/layout";
-import { Alert, AlertDescription, AlertTitle, Button, H1, H2, Muted, P } from "@/shared/ui";
-import { UsersSection } from "@/modules/users/components/UsersSection";
+// Register AG Grid modules first before any other imports
+import { ModuleRegistry, AllCommunityModule } from "ag-grid-community";
+import {
+  AllEnterpriseModule,
+  ServerSideRowModelModule,
+} from "ag-grid-enterprise";
 
-createRoot(document.getElementById('root')!).render(
+ModuleRegistry.registerModules([
+  AllCommunityModule,
+  AllEnterpriseModule,
+  ServerSideRowModelModule,
+]);
+
+import { AppLayout } from "@/app/layout/layout";
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+  Button,
+  H1,
+  H2,
+  Muted,
+  P,
+} from "@/shared/ui";
+import { Users } from "@/modules/users";
+
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <AppLayout>
       <div className="mx-auto w-full max-w-5xl p-4 sm:p-6 lg:p-8">
@@ -18,6 +40,11 @@ createRoot(document.getElementById('root')!).render(
               Base shadcn components + typography, responsive out of the box.
             </Muted>
           </header>
+
+          <section className="space-y-3">
+            <H2>Users</H2>
+            <Users />
+          </section>
 
           <section className="space-y-3">
             <H2>Buttons</H2>
@@ -36,8 +63,8 @@ createRoot(document.getElementById('root')!).render(
               <Button variant="destructive">Destructive</Button>
             </div>
             <P className="max-w-prose">
-              On small screens buttons stack; from <span className="font-medium">sm</span>{" "}
-              they wrap in a row.
+              On small screens buttons stack; from{" "}
+              <span className="font-medium">sm</span> they wrap in a row.
             </P>
           </section>
 
@@ -46,14 +73,14 @@ createRoot(document.getElementById('root')!).render(
             <Alert className="max-w-prose">
               <AlertTitle>Heads up</AlertTitle>
               <AlertDescription>
-                This alert is styled with shadcn tokens and scales nicely on any screen.
+                This alert is styled with shadcn tokens and scales nicely on any
+                screen.
               </AlertDescription>
             </Alert>
           </section>
 
-          <UsersSection />
         </div>
       </div>
     </AppLayout>
-  </StrictMode>,
-)
+  </StrictMode>
+);

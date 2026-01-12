@@ -1,14 +1,13 @@
-import type { UsersResponse } from "@/modules/users/api/users.types"
+import { UserEndpoints, type UsersResponse } from "@/modules/users/api";
 
-const USERS_URL = "https://dummyjson.com/users"
-
-export async function fetchUsers({ signal }: { signal?: AbortSignal } = {}): Promise<UsersResponse> {
-  const res = await fetch(USERS_URL, { signal })
+export async function fetchUsers({
+  signal,
+}: { signal?: AbortSignal } = {}): Promise<UsersResponse> {
+  const res = await fetch(UserEndpoints.USERS, { signal });
 
   if (!res.ok) {
-    throw new Error(`Failed to fetch users: ${res.status} ${res.statusText}`)
+    throw new Error(`Failed to fetch users: ${res.status} ${res.statusText}`);
   }
 
-  return (await res.json()) as UsersResponse
+  return (await res.json()) as UsersResponse;
 }
-

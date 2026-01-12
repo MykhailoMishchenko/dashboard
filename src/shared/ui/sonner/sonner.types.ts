@@ -1,4 +1,3 @@
-import type { ToasterProps } from "sonner"
+import type { ToasterProps } from "sonner";
 
-export type Props = ToasterProps & {}
-
+export type Props = ToasterProps & {};

@@ -10,4 +10,3 @@ export function AppLayout({ children }: Props) {
     </QueryProvider>
   );
 }
-
