@@ -1,5 +1,5 @@
 import { cn } from "@/shared/lib/utils";
-import { Alert, AlertDescription, AlertTitle } from "@/shared/ui/alert/Alert";
+import { Alert, AlertDescription, AlertTitle } from "@/shared/ui/alert/alert";
 import type { ErrorAlertProps } from "@/shared/ui/errorAlert/errorAlert.types";
 
 export function ErrorAlert({ title, description, className }: ErrorAlertProps) {
