@@ -4,9 +4,5 @@ import { useUsersTableManager } from "@/modules/users/hooks";
 export function UsersTable() {
   const columns = useUsersTableManager();
 
-  return (
-    <ServerTable
-      columns={columns}
-    />
-  );
+  return <ServerTable columns={columns} />;
 }

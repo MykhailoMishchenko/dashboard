@@ -1,4 +1,4 @@
-export { Alert, AlertDescription, AlertTitle } from "@/shared/ui/alert/alert";
+export { Alert, AlertDescription, AlertTitle } from "@/shared/ui/alert/Alert";
 export type {
   AlertDescriptionProps,
   AlertProps,

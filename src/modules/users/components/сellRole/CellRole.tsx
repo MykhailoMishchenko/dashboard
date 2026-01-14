@@ -1,5 +1,5 @@
 import { Badge } from "@/shared/ui";
-import type { Props } from "@/modules/users/components/CellRole";
+import type { Props } from "@/modules/users/components/сellRole";
 import { getRoleBadgeVariant } from "@/modules/users/lib/roleBadge";
 import { columnFormatter } from "@/modules/users/lib/columnFormatter";
 
@@ -12,5 +12,5 @@ export function CellRole(props: Props) {
     >
       {role}
     </Badge>
-  )
+  );
 }

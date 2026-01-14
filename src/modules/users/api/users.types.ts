@@ -8,6 +8,7 @@ export type User = {
   role: string;
   height: string;
   weight: string;
+  birthDate: string;
 };
 
 export type UsersResponse = {
@@ -19,4 +20,4 @@ export type UsersResponse = {
 
 export const UserEndpoints = {
   USERS: "https://dummyjson.com/users",
-} as const
+} as const;
